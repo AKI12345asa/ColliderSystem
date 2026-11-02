@@ -1,0 +1,27 @@
+# 换行符：文本统一 LF；Unity 的 YAML 资源不做转换，避免整文件 diff
+* text=auto eol=lf
+
+*.unity -text
+*.prefab -text
+*.asset -text
+*.mat -text
+*.meta -text
+*.anim -text
+*.controller -text
+*.overrideController -text
+*.physicMaterial -text
+*.shader text eol=lf
+
+# 二进制
+*.png binary
+*.jpg binary
+*.tga binary
+*.tif binary
+*.psd binary
+*.exr binary
+*.fbx binary
+*.obj binary
+*.dll binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
