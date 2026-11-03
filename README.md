@@ -72,13 +72,3 @@ Assets/ColliderSystem/
 > **关于素材**：`Assets/Scenes/Demo.unity` 是完整演示场景，它使用了 Synty POLYGON 系列素材。
 > 由于素材授权不允许再分发，`Assets/ArtResources` **未包含在本仓库中**，因此 Demo 场景会缺少模型与材质。
 > 碰撞检测逻辑本身不依赖任何美术资源，用基础几何体即可复现。
-
-
----
-
-## 已知限制
-
-- **暂无性能基准数据**：还没做与 Unity 内置物理、暴力 O(n²) 的对比测试，这是下一步要补的；
-- 顶层 BVH **每帧重建**，尚未做增量更新或帧间复用；
-- `TransformAccessArray`、`NativeStream` 等容器仍为每帧新建；
-- 只支持凸体，凹体需要拆分为凸包组合。
